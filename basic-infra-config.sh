@@ -26,7 +26,7 @@ echo -e "alias vim=nvim\nalias ll='ls -alt'">~/.oh-my-zsh/custom/aliases.zsh
 sudo locale-gen en_US && sudo locale-gen en_US.UTF-8 && export LC_ALL="en_US.UTF-8" && sudo update-locale LC_ALL=en_US.UTF-8 && . /etc/default/locale
 
 # Clone the infra-config repo and dump the commands for a few quick set-up (e.g Atlassian servers )
-[[ ! -d ~/workspace/tools/infra-config ]] && git clone --depth 1 https://github.com/benny-sec/infra-config.git ~/workspace/tools/infra-config    
+[[ ! -d ~/workspace/tools/infra-config ]] && git clone --depth 1 https://github.com/benny-sec/gcp-infra-config ~/workspace/tools/infra-config    
 
 # set-up tmux
 cd

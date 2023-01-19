@@ -2,7 +2,7 @@
 
 mkdir -p ~/workspace/tools 
 
-sudo apt-get update && sudo apt -y install git zsh neovim net-tools wget tree x11-apps xsel ripgrep aria2
+sudo apt-get update && sudo apt -y install git zsh neovim net-tools wget tree x11-apps xsel ripgrep aria2 docker.io
 
 # install oh-my-zsh and change the shell to zsh for the user blackhawk
 cd /tmp && wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh && sh install.sh --unattended && sudo chsh --shell /bin/zsh $USER
@@ -42,6 +42,9 @@ sed -i s%"#set -g @plugin 'tmux-plugins/tmux-resurrect'"%" set -g @plugin 'tmux-
 # Default git configuration
 git config --global user.email "bennyyjacob@gmail.com"
 git config --global user.name "Benny Jacob"
+
+# enable the user to execute docker commands without specifying sudo
+sudo usermod -aG docker $USER
 
 ### MUST REVISIT ###
 # The below settings are mostly workaround and needs to be reviewed in future.
